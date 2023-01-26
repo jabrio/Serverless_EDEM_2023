@@ -12,7 +12,7 @@ WallMart Data Engineering team we are part of has the objective of analyzing and
 - In addition, it must be determined whether the transaction is fraudulent or not.
 
 #### Data Architecture
-<img src="00_DocAux/serverless_architectute_edem_2023.jpg" width="700"/>
+<img src="00_DocAux/edem_2023_architecture.png" width="700"/>
 
 # Part 01: Serverless data processing with Dataflow
 
