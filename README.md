@@ -90,15 +90,9 @@ python edem_dataflow_streaming.py \
     --staging_location gs://<YOUR_PROJECT_ID/stg
 ```
 
-- Dataflow graph
-<img src="00_DocAux/Dataflow_Graph.PNG" width="900"/>
-
 - Run **Generator**
 
 The generator will simulate the transactions that can be performed on the company's ecommerce site.
-
-- Check results in BigQuery
-<img src="00_DocAux/bigquery_results.PNG" width="900"/>
 
 ```
 cd /02_Dataflow/00_Generator
@@ -106,6 +100,12 @@ python generator.py \
     --project_id <PROJECT_ID> \
     --topic_name <INPUT_PUBSUB_TOPIC>
 ```
+
+- Dataflow graph
+<img src="00_DocAux/Dataflow_Graph.PNG" width="900"/>
+
+- Check results in BigQuery
+<img src="00_DocAux/bigquery_results.PNG" width="900"/>
 
 # Extra: Run Dataflow with Flex Templates
 
