@@ -91,10 +91,10 @@ python edem_dataflow_streaming.py \
 ```
 
 - Dataflow graph
-<img src="00_DocAux/Dataflow_Graph.PNG" width="700"/>
+<img src="00_DocAux/Dataflow_Graph.PNG" width="900"/>
 
 - Check results in BigQuery
-<img src="00_DocAux/bigquery_results.PNG" width="700"/>
+<img src="00_DocAux/bigquery_results.PNG" width="900"/>
 
 - Run **Generator**
 
