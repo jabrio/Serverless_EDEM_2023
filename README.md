@@ -1,6 +1,3 @@
-# Serverless_EDEM_2023
-Serverless Data Processing in GCP | Dataflow
-
 ![Logo](https://n3m5z7t4.rocketcdn.me/wp-content/plugins/edem-shortcodes/public/img/logo-Edem.png)
 # Serverless real-time architecture
 Serverless Data Processing | EDEM 2023
