@@ -93,6 +93,12 @@ python edem_dataflow_streaming.py \
     --staging_location gs://<YOUR_PROJECT_ID/stg
 ```
 
+- Dataflow graph
+<img src="00_DocAux/Dataflow_Graph.PNG" width="700"/>
+
+- Check results in BigQuery
+<img src="00_DocAux/bigquery_results.PNG" width="700"/>
+
 - Run **Generator**
 
 The generator will simulate the transactions that can be performed on the company's ecommerce site.
@@ -134,7 +140,5 @@ gcloud dataflow flex-template run "<YOUR_DATAFLOW_JOB_NAME>" \
     --output_topic <OUTPUT_PUBSUB_TOPIC> \
     --output_bigquery <DATASET>.<TABLE>
 ```
-
-<img src="00_DocAux/dataflow_ui.PNG" width="700"/>
 
 
