@@ -93,12 +93,12 @@ python edem_dataflow_streaming.py \
 - Dataflow graph
 <img src="00_DocAux/Dataflow_Graph.PNG" width="900"/>
 
-- Check results in BigQuery
-<img src="00_DocAux/bigquery_results.PNG" width="900"/>
-
 - Run **Generator**
 
 The generator will simulate the transactions that can be performed on the company's ecommerce site.
+
+- Check results in BigQuery
+<img src="00_DocAux/bigquery_results.PNG" width="900"/>
 
 ```
 cd /02_Dataflow/00_Generator
