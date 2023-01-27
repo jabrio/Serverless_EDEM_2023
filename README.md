@@ -32,12 +32,17 @@ gcloud services enable dataflow.googleapis.com
 gcloud services enable cloudbuild.googleapis.com
 ```
 
-- Create Python environment
+- Create Python environment (Windows)
 ```
-virtualenv -p python3 <ENVIRONTMENT_NAME>
-source <ENVIRONMENT_NAME>/bin/activate
+python -m venv <ENVIRONTMENT_NAME>
+<ENVIRONMENT_NAME>\Scripts\activate.bat
 ```
 
+- Create Python Environment (Mac)
+```
+python -m venv <ENVIRONTMENT_NAME>
+source <ENVIRONMENT_NAME>/bin/activate
+```
 - Install python dependencies by running the followinw command:
 
 ```
