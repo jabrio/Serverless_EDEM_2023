@@ -76,23 +76,26 @@ class DLPMaskingDataDoFn(beam.DoFn):
             logging.info("Masking an Email field...")
             #Make API Request
             try:
-                """ TO COMPLETE:  It is required to call the endpoint by passing the field following this structure: params={"item": element['Email']}"""
-                
-                #Dealing with API Response. Get the Field from the response and replace it
-                
-                yield 
+                api_request = requests.get(self.hostname + self.dlp_endpoint, params={"item": element['Email']})
+                #Show the status response in the logs
+                logging.info("Request was finished with the following status: %s", api_request.status_code)
+                #Dealing with API Response
+                element['Email'] = api_request.content.decode('utf-8')
+                logging.info(element)
+                yield element
             #Error handle
             except Exception as err:
-                logging.error("Error while trying to call to the API: %s", err)       
+                logging.error("Error while trying to call to the API: %s", err)
         if element['Credit_Card_Number'] != None:
             logging.info("Masking a Credit_Card_Number field...")
             #Make API Request
             try:
-                """ TO COMPLETE:  It is required to call the endpoint by passing the field following this structure: params={"item": element['Credit_Card_Number']}"""
-
-                #Dealing with API Response. Get the Field from the response and replace it
-
-                yield 
+                api_request = requests.get(self.hostname + self.dlp_endpoint, params={"item": element['Credit_Card_Number']})
+                #Show the status response in the logs
+                logging.info("Request was finished with the following status: %s", api_request.status_code)
+                #Dealing with API Response
+                element['Credit_Card_Number'] = api_request.content.decode('utf-8')
+                yield element
             #Error handle
             except Exception as err:
                 logging.error("Error while trying to call to the API: %s", err)
@@ -108,11 +111,12 @@ class CallMLModelDoFn(beam.DoFn):
     def process(self, element):
         #Make API Request
         try:
-            """ TO COMPLETE:  It is required to call the endpoint by passing the message as json --> json=element"""
-
-            #Dealing with API Response. Get the new field
-
-            yield 
+            api_request = requests.get(self.hostname + self.ml_endpoint, json=element)
+            #Show the status response in the logs
+            logging.info("Request was finished with the following status: %s", api_request.status_code)
+            #Dealing with API Response
+            element['Transaction_Status'] = api_request.content.decode('utf-8')
+            yield element
         #Error handle
         except Exception as err:
             logging.error("Error while trying to call to the API: %s", err)
