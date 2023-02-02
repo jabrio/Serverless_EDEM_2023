@@ -46,7 +46,8 @@ source <ENVIRONMENT_NAME>/bin/activate
 - Install python dependencies by running the followinw command:
 
 ```
-pip install -U -r setup_dependencies.txt
+cd /02_Code/01_Dataflow_Code
+pip install -U -r requirements.txt
 ```
 
 ## PubSub
@@ -91,8 +92,8 @@ python edem_dataflow_streaming.py \
     --runner DataflowRunner \
     --job_name <YOUR_DATAFLOW_JOB> \
     --region <GCP_REGION> \
-    --temp_location gs://<YOUR_PROJECT_ID>/tmp \
-    --staging_location gs://<YOUR_PROJECT_ID/stg
+    --temp_location gs://<BUCKET_NAME>/tmp \
+    --staging_location gs://<BUCKET_NAME>/stg
 ```
 
 - Run **Generator**
